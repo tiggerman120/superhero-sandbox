@@ -4,3 +4,11 @@ export const getAction = payload => {
       payload: payload
     }
   }
+
+export const addToFavorites = payload => {
+  return{
+    type: 'ADD-TO-FAVORITES',
+    payload: payload,
+  }
+}
+
