@@ -1,1 +1,1 @@
-let initialState = {"favorites": []}
+let initialState = {"favorites": []};
