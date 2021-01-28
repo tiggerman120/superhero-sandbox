@@ -11,3 +11,4 @@ export const addToFavorites = payload => {
     payload: payload,
   }
 }
+
