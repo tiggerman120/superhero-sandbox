@@ -1,3 +1,4 @@
+
 let initialState = {
   favorites: [],
   input: '',
@@ -27,3 +28,4 @@ const FavoritesReducers = (state = initialState, action) => {
 };
 
 export default FavoritesReducers;
+
