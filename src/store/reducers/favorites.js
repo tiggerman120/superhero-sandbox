@@ -1,5 +1,6 @@
 let initialState = {
   favorites: [],
+  input: '',
   activeCategory: ''
 };
 
@@ -13,15 +14,6 @@ const FavoritesReducers = (state = initialState, action) => {
     
     case 'ADD-CHARACTER':
       return { ...state, favorites: [...state.favorites, payload] }
-
-    case 'UPDATE-CHARACTER':
-      let updatedCharacter = state.favorites.map(char => {
-        if (char.name === payload) {
-          return { product }
-        }
-        return updatedCharacter;
-      });
-      return { ...state, favorites: updatedCharacter}
     
     case 'DELETE CHARACTER':
       return { 
@@ -33,3 +25,5 @@ const FavoritesReducers = (state = initialState, action) => {
         return state;
   }
 };
+
+export default FavoritesReducers;
