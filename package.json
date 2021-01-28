@@ -11,18 +11,13 @@
     "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-<<<<<<< HEAD
     "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "superagent": "^6.1.0",
-=======
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "redux": "^4.0.5",
->>>>>>> ace4e406123ea68209864c64da9b4da3122b88ba
     "web-vitals": "^0.2.4"
   },
   "scripts": {
