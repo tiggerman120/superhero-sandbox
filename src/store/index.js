@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 
 // reducers 
 import characters from './reducers/the-one'
+// import paginate from './reducers/paginate'
 
 
 // combine reducers
