@@ -5,6 +5,7 @@ import React from 'react';
 // import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
+import picture from './assets/lotrPic.jpg'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -20,6 +21,7 @@ import Main from './components/main';
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+console.log(picture);
 function App() {
 
   return (
@@ -53,6 +55,7 @@ function App() {
               </Grid>
             </Grid>
           </Container>
+            <img src={picture} alt="lotr-picture"></img>
           <Footer />
         </div>
       </Route>
