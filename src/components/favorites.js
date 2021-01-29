@@ -13,12 +13,13 @@ import { addCharacter, deleteCharacter, getAction, showAll } from '../store/acti
 const Favorites = (props) => {
 
   let clickHandler = (character) => {
+    console.log(character);
     props.addToFavorites(character)
   }
   console.log(props.favorites)
     return (
         <Container>
-          {props.favorites.favorites ? props.favorites.favorites.map((character, idx) => {
+          {props.favorites.favorites ? props.favorites.favorites.map((character, idx) => (
             <Container key={idx}>
               {character.name}
               <Button onClick={() => {
@@ -26,7 +27,7 @@ const Favorites = (props) => {
               }}>Add to Favorites</Button>
             </Container>
 
-      })
+          ))
         :
         null
         }
@@ -55,11 +56,14 @@ const mapDispatchToProps = dispatch => ({
   showAll: (character) => {
     dispatch(showAll(character))
   },
-  deleteCharacter: (gender) => {
-    dispatch(deleteCharacter(gender))
+  deleteCharacter: (name) => {
+    dispatch(deleteCharacter(name))
   },
-  getAction: (race) => {
-    dispatch(getAction(race))
+  getAction: () => {
+    dispatch(getAction())
+  },
+  addToFavorites: (name) => {
+    dispatch(addToFavorites(name))
   },
 });
 
