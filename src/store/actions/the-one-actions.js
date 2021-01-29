@@ -30,7 +30,9 @@ export const showRace = (race) => {
 export const getAction = payload => {
   return {
     type: 'GET',
-    payload: payload
+    payload: payload,
+  }
+};
 
 export const addToFavorites = payload => {
   return{
@@ -38,5 +40,5 @@ export const addToFavorites = payload => {
     payload: payload,
 
   }
-}
+};
 
