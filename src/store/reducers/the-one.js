@@ -6,9 +6,12 @@ import { nextPage } from '../reducers/paginate'
 
 require('dotenv').config();
 
-let initialState = {"all": []};
+let initialState = {
+  "all": [],
+  "category": '',
+};
 
-let url = 'https://the-one-api.dev/v2/character';
+let url = 'https://the-one-api.dev/v2/character?limit=20';
 const AUTH = process.env.REACT_APP_AUTH;
 
 
@@ -24,6 +27,7 @@ export const get = () => dispatch => {
     }
 
 
+    // eslint-disable-next-line import/no-anonymous-default-export
     export default (state=initialState, action) => {
         let {type, payload} = action;
         switch(type) { 
@@ -32,6 +36,9 @@ export const get = () => dispatch => {
                 nextPage(payload);
                 return{...state, all: payload}
 
+                case 'CHANGE-CATEGORY':
+                  console.log(payload);
+                  return{...state, category:payload}
             default: 
                 return state;
         }

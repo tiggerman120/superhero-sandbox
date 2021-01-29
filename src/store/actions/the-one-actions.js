@@ -7,7 +7,7 @@ export const showCharacter = (name) => {
 };
 
 export const showAll = (character) => {
-  return { 
+  return {
     type: 'CHARACTERS',
     payload: character,
   }
@@ -30,15 +30,24 @@ export const showRace = (race) => {
 export const getAction = payload => {
   return {
     type: 'GET',
-    payload: payload,
+
+    payload: payload
   }
-};
+}
+
 
 export const addToFavorites = payload => {
-  return{
+  return {
     type: 'ADD-TO-FAVORITES',
     payload: payload,
 
   }
 };
+
+export const changeCategory = payload => {
+  return {
+    type: 'CHANGE-CATEGORY',
+    payload: payload,
+  }
+}
 

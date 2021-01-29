@@ -30,6 +30,7 @@ const FavoritesReducers = (state = initialState, action) => {
       return { ...state }
     
     case 'ADD-CHARACTER':
+      console.log(state)
       return { ...state, favorites: [...state.favorites, payload] }
     
     case 'DELETE CHARACTER':
