@@ -18,6 +18,7 @@ import Favorites from './components/favorites';
 import logo from './logo.svg';
 import './App.css';
 import Main from './components/main';
+import Characters from './components/characters/characters';
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -44,10 +45,15 @@ function App() {
 
                     <Route exact path='/'> 
                     <Main />
+                    <Characters />
                     </Route>
                     
                     <Route exact path='/favorites'> 
                     <Favorites />
+                    </Route>
+
+                    <Route exact path='/characters'>
+                      <Characters />
                     </Route>
 
                   </CardContent>

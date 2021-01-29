@@ -4,9 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
-import Switchboard, { addToFavorites } from '../store/actions/the-one-actions'
 
-const mapDispatchToProps = { addToFavorites };
+import { addToFavorites } from '../store/actions/the-one-actions';
+
+const mapDispatchToProps = { };
 
 
 const Favorites = (props) => {
@@ -40,7 +41,7 @@ const Favorites = (props) => {
 
 const mapStateToProps = state => {
   return {
-    characters: state.Switchboard.characters,
+    characters: state.characters.all,
     
   }
 }
