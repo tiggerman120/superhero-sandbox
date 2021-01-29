@@ -5,13 +5,13 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 // reducers 
-import favs from './reducers/favorites';
+import favorites from './reducers/favorites';
 import characters from './reducers/the-one'
 // import paginate from './reducers/paginate'
 
 
 // combine reducers
-let reducers = combineReducers({characters, favs});
+let reducers = combineReducers({characters, favorites});
 
 
 // store
