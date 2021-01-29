@@ -1,6 +1,6 @@
+
 let initialState = {
   favorites: [],
-  input: '',
   activeCategory: ''
 };
 
@@ -11,8 +11,15 @@ const FavoritesReducers = (state = initialState, action) => {
 
     case 'CHARACTERS':
       return { ...state, activeCategory: payload }
+
+    case 'GET':
+      let saved = JSON.parse(localStorage.getItem("favorites"));
+      console.log('saved', saved);
+      return { favorites: saved }
     
     case 'ADD-CHARACTER':
+      console.log(state)
+      localStorage.setItem("favorites", JSON.stringify([...state.favorites, payload]));
       return { ...state, favorites: [...state.favorites, payload] }
     
     case 'DELETE CHARACTER':
@@ -27,3 +34,4 @@ const FavoritesReducers = (state = initialState, action) => {
 };
 
 export default FavoritesReducers;
+
