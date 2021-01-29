@@ -21,6 +21,7 @@ import Main from './components/main';
 import Characters from './components/characters/characters';
 import Nav from './components/nav/nav';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import classes from '*.module.css';
 
 console.log(picture);
 function App() {
