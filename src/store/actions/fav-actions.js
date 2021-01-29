@@ -6,6 +6,7 @@ export const showAll = (character) => {
 };
 
 export const addCharacter = (name) => {
+  
   return {
     type: 'ADD-CHARACTER',
     payload: name,

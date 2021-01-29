@@ -4,8 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
+
 import { addToFavorites } from '../store/actions/the-one-actions';
 import { addCharacter, deleteCharacter, getAction, showAll } from '../store/actions/fav-actions';
+
 
 
 const Favorites = (props) => {
@@ -39,8 +41,10 @@ const Favorites = (props) => {
 
 const mapStateToProps = state => {
   return {
+
     // characters: state.characters.all,
     favorites: state.favorites,
+
     
   }
 }
