@@ -6,7 +6,7 @@ import React from 'react';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 import picture from './assets/lotrPic.jpg'
-import CssBaseline from '@material-ui/core/CssBaseline';
+// import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -15,12 +15,12 @@ import { CardContent } from '@material-ui/core';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Favorites from './components/favorites';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Main from './components/main';
 import Characters from './components/characters/characters';
 import Nav from './components/nav/nav';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 console.log(picture);
 function App() {
@@ -48,9 +48,11 @@ function App() {
                     <Characters />
                     </Route>
                     
-                    <Route exact path='/favorites'> 
-                    <Favorites />
+                    <Switch>
+                      <Route exact path='/favorites' component={Favorites}> 
                     </Route>
+                    </Switch>
+                    <Favorites />
 
                     <Route exact path='/characters'>
                       <Characters />
@@ -61,7 +63,7 @@ function App() {
               </Grid>
             </Grid>
           </Container>
-            <img src={picture} alt="lotr-picture"></img>
+            {/* <img src={picture} alt="lotr-picture"></img> */}
           <Footer />
         </div>
       </Route>

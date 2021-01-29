@@ -11,7 +11,9 @@ import characters from './reducers/the-one'
 
 
 // combine reducers
+
 let reducers = combineReducers({characters, favorites});
+
 
 
 // store
