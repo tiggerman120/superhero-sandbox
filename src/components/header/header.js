@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <container>
         <Typography variant="h5">
-           Fan Favorites
+           Lord Of The Rings: Fan Favorites
         </Typography>
              <Typography variant="h5">
         </Typography>

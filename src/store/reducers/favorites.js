@@ -1,20 +1,6 @@
 
 let initialState = {
-  favorites: [
-    {
-      _id: "5cd99d4bde30eff6ebccfbbe",
-      height: "",
-      race: "Human",
-      gender: "Female",
-      birth: "",
-      spouse: "Belemir",
-      death: "",
-      realm: "",
-      hair: "",
-      name: "Adanel",
-      wikiUrl: "http://lotr.wikia.com//wiki/Adanel"
-  }
-  ],
+  favorites: [],
   activeCategory: ''
 };
 
@@ -27,10 +13,13 @@ const FavoritesReducers = (state = initialState, action) => {
       return { ...state, activeCategory: payload }
 
     case 'GET':
-      return { ...state }
+      let saved = JSON.parse(localStorage.getItem("favorites"));
+      console.log('saved', saved);
+      return { favorites: saved }
     
     case 'ADD-CHARACTER':
       console.log(state)
+      localStorage.setItem("favorites", JSON.stringify([...state.favorites, payload]));
       return { ...state, favorites: [...state.favorites, payload] }
     
     case 'DELETE CHARACTER':
