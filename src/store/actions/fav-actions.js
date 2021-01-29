@@ -21,6 +21,7 @@ export const updateCharacter = (name) => {
 }
 
 export const deleteCharacter = (name) => {
+  console.log(name)
   return { 
     type: 'DELETE-CHARACTER',
     payload: name,

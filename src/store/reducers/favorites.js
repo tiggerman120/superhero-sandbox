@@ -33,7 +33,8 @@ const FavoritesReducers = (state = initialState, action) => {
       console.log(state)
       return { ...state, favorites: [...state.favorites, payload] }
     
-    case 'DELETE CHARACTER':
+    case 'DELETE-CHARACTER':
+      console.log(payload)
       return { 
         favorites: [
           ...state.favorites.filter(char => char !== payload)
