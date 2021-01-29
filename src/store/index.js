@@ -1,5 +1,6 @@
 import {createStore, combineReducers, applyMiddleware } from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
+import favorites from './reducers/favorites';
 
 // middleware
 import thunk from 'redux-thunk';
@@ -11,7 +12,9 @@ import characters from './reducers/the-one'
 
 
 // combine reducers
-let reducers = combineReducers({characters, favs});
+
+let reducers = combineReducers({characters, favorites});
+
 
 
 // store

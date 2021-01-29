@@ -6,28 +6,27 @@ import Button from '@material-ui/core/Button';
 
 
 import { addToFavorites } from '../store/actions/the-one-actions';
+import { addCharacter, deleteCharacter, getAction, showAll } from '../store/actions/fav-actions';
 
-const mapDispatchToProps = { };
 
 
 const Favorites = (props) => {
-  console.log(props)
 
   let clickHandler = (character) => {
     props.addToFavorites(character)
   }
+  console.log(props.favorites)
     return (
         <Container>
-          {props.characters ? props.characters.map((character, idx) => {
+          {props.favorites.favorites ? props.favorites.favorites.map((character, idx) => {
             <Container key={idx}>
-
               {character.name}
               <Button onClick={() => {
                 clickHandler(character)
               }}>Add to Favorites</Button>
             </Container>
 
-          })
+      })
         :
         null
         }
@@ -41,9 +40,28 @@ const Favorites = (props) => {
 
 const mapStateToProps = state => {
   return {
-    characters: state.characters.all,
+
+    // characters: state.characters.all,
+    favorites: state.favorites,
+
     
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  addCharacter: (name) => {
+    dispatch(addCharacter(name))
+  },
+  showAll: (character) => {
+    dispatch(showAll(character))
+  },
+  deleteCharacter: (gender) => {
+    dispatch(deleteCharacter(gender))
+  },
+  getAction: (race) => {
+    dispatch(getAction(race))
+  },
+});
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);

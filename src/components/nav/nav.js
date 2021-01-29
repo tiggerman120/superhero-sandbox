@@ -10,11 +10,13 @@ import IconButton from '@material-ui/core/IconButton';
 import { changeCategory } from '../../store/actions/the-one-actions';
 const mapDispatchToProps = { changeCategory }
 
+
 function Nav(props) {
   const clickHandler= (e) => {
     console.log(e)
     props.changeCategory(e.currentTarget.value)
   }
+
   return (
     <Container>
       <AppBar position="static">
@@ -24,9 +26,11 @@ function Nav(props) {
           </IconButton>
           <Typography variant="h6">
             <Button href="/" color="inherit">HOME</Button>
+
             <Button onClick={(e) => {clickHandler(e)}} value="Male" color="inherit">Male</Button>
             <Button onClick={(e) => {clickHandler(e)}} value="Female" color="inherit">Female</Button>
             <Button href="/favorites" color="inherit">favorites</Button>
+
           </Typography>
         </Toolbar>
       </AppBar>
@@ -36,7 +40,6 @@ function Nav(props) {
     </Container>
   )
 }
-
 
 const mapStateToProps = state => {
   return {
