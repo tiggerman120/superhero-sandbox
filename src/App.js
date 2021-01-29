@@ -44,26 +44,24 @@ function App() {
                     <Nav />
 
                     <Route exact path='/'> 
+                    <br/>
+                    <img src={picture} width='500px' alt="lotr-picture"></img>
                     <Main />
+                    <br/>
                     <Characters />
                     </Route>
                     
                     <Switch>
                       <Route exact path='/favorites' component={Favorites}> 
+                      <Favorites />
                     </Route>
                     </Switch>
-                    <Favorites />
-
-                    <Route exact path='/characters'>
-                      <Characters />
-                    </Route>
 
                   </CardContent>
                 </Card>
               </Grid>
             </Grid>
           </Container>
-            {/* <img src={picture} alt="lotr-picture"></img> */}
           <Footer />
         </div>
       </Route>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
@@ -16,6 +16,13 @@ const Favorites = (props) => {
     console.log(character);
     props.addToFavorites(character)
   }
+
+  const load = () => {
+    props.getAction()
+  }
+
+  useEffect(load, [])
+  
   console.log(props.favorites)
     return (
         <Container>
@@ -24,7 +31,7 @@ const Favorites = (props) => {
               {character.name}
               <Button onClick={() => {
                 clickHandler(character)
-              }}>Add to Favorites</Button>
+              }}>Remove From Favorites</Button>
             </Container>
 
           ))

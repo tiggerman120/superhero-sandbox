@@ -27,8 +27,8 @@ function Nav(props) {
           <Typography variant="h6">
             <Button href="/" color="inherit">HOME</Button>
 
-            <Button onClick={(e) => {clickHandler(e)}} value="Male" color="inherit">Male</Button>
-            <Button onClick={(e) => {clickHandler(e)}} value="Female" color="inherit">Female</Button>
+            <Button onClick={(e) => {clickHandler(e)}}  value="Male" color="inherit">Male</Button>
+            <Button onClick={(e) => {clickHandler(e)}}  value="Female" color="inherit">Female</Button>
             <Button href="/favorites" color="inherit">favorites</Button>
 
           </Typography>
